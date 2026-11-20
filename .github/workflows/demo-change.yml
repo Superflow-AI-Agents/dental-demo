@@ -1,0 +1,61 @@
+name: Demo change
+
+# Commits one known change to content/ on main. Vercel deploys every push to main to
+# production, and Site Care re-checks the pages that changed. The logic lives in
+# scripts/demo-change.ts. Run "reset" afterwards to put the site back to clean.
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: What to change (reset removes every demo change)
+        type: choice
+        default: broken-link
+        options:
+          - broken-link
+          - missing-alt-text
+          - low-contrast
+          - typo
+          - content-update
+          - all-issues
+          - reset
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demo-change
+  cancel-in-progress: false
+
+jobs:
+  demo-change:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply change
+        id: apply
+        run: npx --yes tsx@4.23.15 scripts/demo-change.ts "$TYPE"
+        env:
+          TYPE: ${{ inputs.type }}
+      - name: Commit and push
+        run: |
+          if git diff --quiet -- content; then
+            echo "::notice::Nothing to change. The site already matches \"$TYPE\", so no commit and no deploy."
+            echo "Nothing to change. The site already matches \"$TYPE\", so there is no commit and no deploy." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          # Same author as the Mutate site workflow on this Vercel team: the GitHub Actions bot.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content
+          git commit -m "$MESSAGE"
+          git push origin HEAD:main
+          sha="$(git rev-parse HEAD)"
+          echo "Commit [\`${sha:0:7}\`](${{ github.server_url }}/${{ github.repository }}/commit/$sha) is on main. Vercel deploys it to production in a minute or two, then Site Care checks the changed pages." >> "$GITHUB_STEP_SUMMARY"
+        env:
+          TYPE: ${{ inputs.type }}
+          MESSAGE: ${{ steps.apply.outputs.message }}
