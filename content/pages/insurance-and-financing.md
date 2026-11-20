@@ -8,7 +8,7 @@ jsonLd: none
 <div class="hero-copy">
 <p class="eyebrow">Insurance and financing</p>
 <h1>Clear costs before any treatment</h1>
-<p class="hero-sub" style="color: #cfd3d1">We check your benefits before you arrive and give you a written estimate for every treatment, so the bill is never a surprise.</p>
+<p class="hero-sub">We check your benefits before you arrive and give you a written estimate for every treatment, so the bill is never a surprise.</p>
 </div>
 <div class="hero-media">
 <img src="/media/pages/insurance.jpg" alt="Tidy front desk with a computer screen and a small plant" width="1200" height="800">

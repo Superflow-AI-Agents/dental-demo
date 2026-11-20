@@ -11,7 +11,7 @@ jsonLd: none
 <p class="hero-sub">We are a family dental practice in Larkmoor, Oregon, built around one idea: explain everything, rush nothing.</p>
 </div>
 <div class="hero-media">
-<img src="/media/pages/about.jpg" width="1200" height="800">
+<img src="/media/pages/about.jpg" alt="Clean treatment room with a dental chair facing a large window" width="1200" height="800">
 </div>
 </section>
 
