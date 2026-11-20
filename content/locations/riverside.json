@@ -1,0 +1,41 @@
+{
+  "title": "Riverside Dental Office | Larkmoor Family Dentistry",
+  "description": "Our Riverside office on River Road, home of our implant and oral surgery care, with free parking and Saturday morning hours.",
+  "eyebrow": "Riverside office",
+  "heading": "Dentist in Riverside, Larkmoor",
+  "name": "Riverside",
+  "factsHeading": "Visit Riverside",
+  "cta": {
+    "label": "Book at Riverside",
+    "href": "/book"
+  },
+  "address": {
+    "street": "88 River Road",
+    "city": "Larkmoor",
+    "state": "OR",
+    "zip": "97399"
+  },
+  "phone": "(503) 555-0156",
+  "hours": [
+    {
+      "days": "Monday to Thursday",
+      "time": "7:30 am to 6:00 pm"
+    },
+    {
+      "days": "Friday",
+      "time": "7:30 am to 3:00 pm"
+    },
+    {
+      "days": "Saturday",
+      "time": "8:00 am to 1:00 pm"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "parking": "Free parking in our own lot. The lot entrance is on Birch Street, just past the river path crossing.",
+  "image": "/media/locations/riverside.jpg",
+  "imageAlt": "Riverside office exterior with large windows facing a tree-lined street",
+  "body": "## About the Riverside office\n\nRiverside is where Larkmoor Family Dentistry started in 2004, in a converted brick storefront a block from the river path. It has grown since then, but the front desk still keeps a bowl of clementines in winter.\n\n[Dr. Helen Whitfield](/team/dr-helen-whitfield) sees patients here most days. Riverside is also home to our implant and oral surgery care, with a 3D imaging scanner that lets us plan implants without sending you to another office.\n\n## Care at this office\n\n<ul class=\"check-list\">\n<li>Cleanings, exams and family checkups</li>\n<li>Dental implants, from planning to final crown</li>\n<li>Extractions, including wisdom teeth</li>\n<li>Dentures and implant-supported dentures</li>\n<li>Whitening and veneers</li>\n</ul>\n\n## Getting here\n\nRiverside sits on River Road between Birch Street and the footbridge. If you are walking or cycling, the river path passes right behind the building, and there is a bike rack by the back entrance.\n\n<div class=\"callout\">\n<p><strong>First visit?</strong> Arrive 10 minutes early so we can scan your insurance card and take a quick health history. See our <a href=\"/new-patients\">new patient guide</a> for what to bring.</p>\n</div>\n"
+}

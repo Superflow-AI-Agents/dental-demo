@@ -1,0 +1,41 @@
+{
+  "title": "Old Mill Dental Office | Larkmoor Family Dentistry",
+  "description": "Our Old Mill office on Mill Race Lane: kids and family dentistry in a calm space, with early mornings and Saturday hours.",
+  "eyebrow": "Old Mill office",
+  "heading": "Dentist in Old Mill, Larkmoor",
+  "name": "Old Mill",
+  "factsHeading": "Visit Old Mill",
+  "cta": {
+    "label": "Book at Old Mill",
+    "href": "/book"
+  },
+  "address": {
+    "street": "415 Mill Race Lane",
+    "city": "Larkmoor",
+    "state": "OR",
+    "zip": "97399"
+  },
+  "phone": "(503) 555-0168",
+  "hours": [
+    {
+      "days": "Monday to Thursday",
+      "time": "7:30 am to 6:00 pm"
+    },
+    {
+      "days": "Friday",
+      "time": "7:30 am to 3:00 pm"
+    },
+    {
+      "days": "Saturday",
+      "time": "8:00 am to 1:00 pm"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "parking": "Free street parking on Mill Race Lane, plus a small lot beside the building with one accessible space.",
+  "image": "/media/locations/old-mill.jpg",
+  "imageAlt": "Old Mill office in a restored timber building with a wide front porch",
+  "body": "## About the Old Mill office\n\nOur Old Mill office sits in a restored timber building at the end of Mill Race Lane, across from the old millpond. It is the quietest of our offices and the one families with young kids tend to love. The waiting area has a reading nook, and every treatment room has a ceiling screen for cartoons.\n\n[Dr. Priya Natarajan](/team/dr-priya-natarajan) leads the team here, with a special focus on kids and families. Hygiene visits are often with [Luis Ortega](/team/luis-ortega).\n\n## Care at this office\n\n<ul class=\"check-list\">\n<li>Kids checkups from the first tooth</li>\n<li>Cleanings, exams and sealants</li>\n<li>Tooth-colored fillings</li>\n<li>Clear aligners for teens and adults</li>\n</ul>\n\n## Getting here\n\nFollow Mill Race Lane to the end, past the footbridge over the mill race. The building has a ramp at the side entrance, and strollers are welcome in every room.\n\n<div class=\"callout\">\n<p><strong>Bringing a child for the first time?</strong> Tell us when you book. We will plan a short, relaxed first visit and send a few tips beforehand.</p>\n</div>\n"
+}

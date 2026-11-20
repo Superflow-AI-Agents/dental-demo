@@ -1,0 +1,41 @@
+{
+  "title": "Northgate Dental Office | Larkmoor Family Dentistry",
+  "description": "Our Northgate office on Northgate Avenue: family dentistry, crowns, root canals and cleanings, with early morning and Saturday hours.",
+  "eyebrow": "Northgate office",
+  "heading": "Dentist in Northgate, Larkmoor",
+  "name": "Northgate",
+  "factsHeading": "Visit Northgate",
+  "cta": {
+    "label": "Book at Northgate",
+    "href": "/book"
+  },
+  "address": {
+    "street": "2140 Northgate Avenue",
+    "city": "Larkmoor",
+    "state": "OR",
+    "zip": "97399"
+  },
+  "phone": "(503) 555-0142",
+  "hours": [
+    {
+      "days": "Monday to Thursday",
+      "time": "7:30 am to 6:00 pm"
+    },
+    {
+      "days": "Friday",
+      "time": "7:30 am to 3:00 pm"
+    },
+    {
+      "days": "Saturday",
+      "time": "8:00 am to 1:00 pm"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "parking": "Free parking in the shared lot behind the building. Two accessible spaces sit right by our door.",
+  "image": "/media/locations/northgate.jpg",
+  "imageAlt": "Front entrance of the Northgate office with a glass door and planters",
+  "body": "## About the Northgate office\n\nNorthgate is our busiest office and the one most people find first, a short walk from the Northgate library and the 12 bus line. The space was rebuilt in 2022 with five treatment rooms, a quiet consult room and a small play corner in the waiting area.\n\nDr. Marcus Oyelaran leads the team here, and most of our crown and root canal work happens at Northgate. You will often see [Jenna Kowalski](/team/jenna-kowalski) in the hygiene rooms.\n\n## Care at this office\n\n<ul class=\"check-list\">\n<li>Cleanings, exams and digital x-rays</li>\n<li>Tooth-colored fillings, crowns and bridges</li>\n<li>Root canals, usually in a single visit</li>\n<li>Same-day appointments for toothaches and broken teeth</li>\n</ul>\n\n## Getting here\n\nFrom the north side, take Northgate Avenue past the library and look for our sign on the left. The 12 bus stops at the corner of Northgate and Fifth, about a two minute walk. There is covered bike parking by the front door.\n\n<div class=\"callout\">\n<p><strong>First visit?</strong> Arrive 10 minutes early so we can scan your insurance card and take a quick health history. See our <a href=\"/new-patients\">new patient guide</a> for what to bring.</p>\n</div>\n"
+}

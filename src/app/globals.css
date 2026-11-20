@@ -1,0 +1,509 @@
+/*
+  Tailwind scans src/ only. It must never scan content/: if a content edit could add a
+  utility class, the CSS file hash would change and every page's HTML would differ (F3).
+  Content files use only the fixed class vocabulary defined below (see docs/content-guide.md).
+*/
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+
+  --color-ink: #13302d;
+  --color-ink-2: #46605c;
+  --color-ink-3: #6f8582;
+  --color-accent: #0c5b55;
+  --color-accent-2: #0a4a45;
+  --color-mint: #a8e0d2;
+  --color-mint-soft: #e4f3ee;
+  --color-sand: #f7f5f0;
+  --color-sand-2: #efebe2;
+  --color-line: #dfe5e2;
+  --color-coral: #e2725b;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-sand font-sans text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  img {
+    max-width: 100%;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-coral);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+  .skip-link {
+    @apply absolute left-4 top-[-60px] z-50 rounded-lg bg-ink px-4 py-2 text-white;
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
+
+  /* Header */
+  .site-header {
+    @apply sticky top-0 z-40 border-b border-line/80 bg-sand/90 backdrop-blur;
+  }
+  .mobile-nav summary {
+    @apply flex cursor-pointer list-none items-center gap-2 rounded-full border border-line bg-white px-4 py-2;
+  }
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+  .burger,
+  .burger::before,
+  .burger::after {
+    @apply block h-[2px] w-4 rounded bg-ink;
+  }
+  .burger {
+    @apply relative;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    @apply absolute left-0;
+  }
+  .burger::before {
+    top: -5px;
+  }
+  .burger::after {
+    top: 5px;
+  }
+  .mobile-panel {
+    @apply absolute inset-x-0 top-full border-b border-line bg-sand px-5 pb-6 pt-2 shadow-lg;
+  }
+  .mobile-panel ul {
+    @apply divide-y divide-line;
+  }
+  .mobile-panel li a {
+    @apply block py-3 text-lg font-medium;
+  }
+  .mobile-phone {
+    @apply my-4 block font-semibold text-accent;
+  }
+
+  /* Footer */
+  .site-footer {
+    @apply bg-ink text-white;
+  }
+  .footer-heading {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-mint;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-[15px] font-semibold text-white no-underline transition-colors;
+  }
+  .btn:hover {
+    @apply bg-accent-2 text-white;
+  }
+  .btn-secondary {
+    @apply border border-ink/15 bg-white text-ink;
+  }
+  .btn-secondary:hover {
+    @apply border-ink/30 bg-white text-accent;
+  }
+  .btn-row {
+    @apply mt-8 flex flex-wrap gap-3;
+  }
+
+  .eyebrow {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-accent;
+  }
+  .page-title {
+    @apply font-serif text-[2.5rem] leading-[1.08] font-medium tracking-[-0.01em] text-ink md:text-[3.5rem];
+  }
+
+  /* Content body: prose for Markdown, plus full-width bands for designed sections */
+  .content-body {
+    @apply mx-auto w-full max-w-[1200px] px-5 pb-20 md:px-8;
+  }
+  .content-body > h1:first-child,
+  .content-body > .eyebrow:first-child + h1 {
+    @apply mt-14 md:mt-20;
+  }
+  .content-body h1 {
+    @apply mb-6 max-w-4xl font-serif text-[2.5rem] leading-[1.08] font-medium tracking-[-0.01em] text-ink md:text-[3.5rem];
+  }
+  .content-body h2 {
+    @apply mt-14 mb-4 max-w-3xl font-serif text-[1.85rem] leading-tight font-medium text-ink md:text-[2.25rem];
+  }
+  .content-body h3 {
+    @apply mt-8 mb-2 text-[1.2rem] leading-snug font-semibold text-ink;
+  }
+  .content-body > p,
+  .content-body > ul,
+  .content-body > ol,
+  .content-body > blockquote,
+  .content-body > table,
+  .content-body > details {
+    @apply max-w-[72ch];
+  }
+  .content-body p {
+    @apply my-4 text-ink-2;
+  }
+  .content-body ul,
+  .content-body ol {
+    @apply my-5 space-y-2 pl-6 text-ink-2;
+  }
+  .content-body ul {
+    @apply list-disc;
+  }
+  .content-body ol {
+    @apply list-decimal;
+  }
+  .content-body li::marker {
+    @apply text-accent;
+  }
+  .content-body a:not(.btn) {
+    @apply font-medium text-accent underline decoration-accent/30 underline-offset-[3px] hover:decoration-accent;
+  }
+  .content-body strong {
+    @apply font-semibold text-ink;
+  }
+  .content-body hr {
+    @apply my-14 border-line;
+  }
+  .content-body blockquote {
+    @apply my-8 border-l-4 border-mint pl-6 font-serif text-xl text-ink italic;
+  }
+  .content-body table {
+    @apply my-6 w-full border-collapse text-[15px];
+  }
+  .content-body th,
+  .content-body td {
+    @apply border-b border-line px-3 py-3 text-left align-top;
+  }
+  .content-body thead th {
+    @apply bg-sand-2 font-semibold text-ink;
+  }
+  .content-body img {
+    @apply h-auto rounded-2xl;
+  }
+  .content-body figure {
+    @apply my-8;
+  }
+  .content-body figcaption {
+    @apply mt-3 text-sm text-ink-3;
+  }
+
+  .lede {
+    @apply max-w-3xl text-xl leading-relaxed text-ink-2 md:text-[1.35rem];
+  }
+  .content-body .lede {
+    @apply text-ink-2;
+  }
+  .note {
+    @apply text-sm text-ink-3;
+  }
+  .content-body .note {
+    @apply text-ink-3;
+  }
+
+  /* Full-bleed bands, without making the page wider than the screen */
+  .band {
+    @apply my-16 bg-white py-16 md:py-20;
+    box-shadow: 0 0 0 100vmax var(--color-white);
+    clip-path: inset(0 -100vmax);
+  }
+  .band-mint {
+    @apply my-16 bg-mint-soft py-16 md:py-20;
+    box-shadow: 0 0 0 100vmax var(--color-mint-soft);
+    clip-path: inset(0 -100vmax);
+  }
+  .band-dark {
+    @apply my-16 bg-accent py-16 text-white md:py-20;
+    box-shadow: 0 0 0 100vmax var(--color-accent);
+    clip-path: inset(0 -100vmax);
+  }
+  .band-dark h2,
+  .band-dark h3,
+  .band-dark p,
+  .band-dark strong {
+    @apply text-white;
+  }
+  .band-dark p {
+    @apply text-white/80;
+  }
+  .content-body > .band:last-child,
+  .content-body > .band-mint:last-child,
+  .content-body > .band-dark:last-child {
+    @apply mb-[-5rem];
+  }
+  .band > :first-child,
+  .band-mint > :first-child,
+  .band-dark > :first-child {
+    @apply mt-0;
+  }
+
+  /* Hero */
+  .hero {
+    @apply grid items-center gap-10 pt-12 pb-6 md:pt-20 lg:grid-cols-12 lg:gap-14;
+  }
+  .hero-copy {
+    @apply lg:col-span-6;
+  }
+  .hero-copy h1 {
+    @apply mt-0;
+  }
+  .hero-sub {
+    @apply max-w-xl text-xl leading-relaxed text-ink-2;
+  }
+  .hero-media {
+    @apply lg:col-span-6;
+  }
+  .hero-media img {
+    @apply w-full rounded-[28px];
+  }
+  .hero-phone {
+    @apply mt-6 text-[15px] text-ink-2;
+  }
+  .content-body .hero-phone a {
+    @apply font-semibold text-ink no-underline;
+  }
+
+  .banner {
+    @apply mt-6 flex flex-col gap-3 rounded-2xl border border-mint bg-mint-soft px-5 py-4 text-[15px] text-ink sm:flex-row sm:items-center sm:justify-between;
+  }
+  .content-body .banner p {
+    @apply my-0 text-ink;
+  }
+  .banner-tag {
+    @apply mr-2 inline-block rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-white;
+  }
+
+  /* Grids and cards */
+  .grid-2 {
+    @apply my-8 grid gap-6 md:grid-cols-2;
+  }
+  .grid-3 {
+    @apply my-8 grid gap-6 md:grid-cols-3;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white p-6 md:p-7;
+  }
+  .band .card {
+    @apply bg-sand;
+  }
+  .card h3 {
+    @apply mt-0;
+  }
+  .content-body .card p {
+    @apply my-2;
+  }
+  .card img {
+    @apply mb-5 w-full;
+  }
+  .card-link {
+    @apply mt-3 inline-block font-semibold;
+  }
+  .split {
+    @apply my-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-16;
+  }
+  .split img {
+    @apply w-full;
+  }
+  .split > div > :first-child {
+    @apply mt-0;
+  }
+
+  .stat-row {
+    @apply my-10 grid grid-cols-2 gap-6 md:grid-cols-4;
+  }
+  .stat {
+    @apply border-t-2 border-accent pt-4;
+  }
+  .stat strong {
+    @apply block font-serif text-4xl font-medium text-ink;
+  }
+  .content-body .stat p,
+  .stat span {
+    @apply mt-1 block text-[15px] text-ink-2;
+  }
+
+  .check-list {
+    @apply list-none! pl-0!;
+  }
+  .check-list li {
+    @apply relative pl-8;
+  }
+  .check-list li::before {
+    content: "";
+    @apply absolute top-[0.45em] left-0 h-4 w-4 rounded-full bg-mint;
+    box-shadow: inset 0 0 0 4px var(--color-mint-soft);
+  }
+
+  .callout {
+    @apply my-8 max-w-3xl rounded-2xl border-l-4 border-coral bg-white px-6 py-5;
+  }
+  .content-body .callout p {
+    @apply my-1 text-ink;
+  }
+
+  .faq {
+    @apply my-3 max-w-3xl rounded-xl border border-line bg-white;
+  }
+  .faq summary {
+    @apply cursor-pointer list-none px-5 py-4 font-semibold text-ink;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq summary::after {
+    content: "+";
+    @apply float-right text-xl leading-none text-accent;
+  }
+  .faq[open] summary::after {
+    content: "\2212";
+  }
+  .content-body .faq p {
+    @apply mt-0 mb-0 px-5 pb-5;
+  }
+
+  .compare {
+    @apply my-8 max-w-4xl;
+  }
+  .content-body .compare table {
+    @apply my-0;
+  }
+
+  .price {
+    @apply font-serif text-3xl font-medium text-ink;
+  }
+
+  .quote {
+    @apply rounded-2xl border border-line bg-white p-7;
+  }
+  .content-body .quote p {
+    @apply my-0 font-serif text-lg leading-relaxed text-ink;
+  }
+  .content-body .quote .quote-by {
+    @apply mt-4 font-sans text-sm font-semibold text-ink-2;
+  }
+  .content-body .quote .stars {
+    @apply mb-3 font-sans text-base tracking-widest text-coral;
+  }
+
+  .byline {
+    @apply -mt-2 mb-8 text-[15px] text-ink-3;
+  }
+  .content-body .byline {
+    @apply text-ink-3;
+  }
+  .content-body .byline a {
+    @apply text-ink-2;
+  }
+
+  .portrait {
+    @apply my-8 w-full max-w-[360px] rounded-2xl;
+  }
+  .hero-media .portrait {
+    @apply mx-auto my-0 max-w-[420px] rounded-[28px];
+  }
+
+  /* Forms (posts to the stub at /api/form) */
+  .form {
+    @apply my-10 grid max-w-3xl gap-5 rounded-2xl border border-line bg-white p-6 md:grid-cols-2 md:p-8;
+  }
+  .field {
+    @apply flex flex-col gap-1.5;
+  }
+  .field-wide {
+    @apply md:col-span-2;
+  }
+  .field label {
+    @apply text-sm font-semibold text-ink;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    @apply w-full rounded-lg border border-line bg-sand px-3.5 py-2.5 text-base text-ink;
+  }
+  .field textarea {
+    @apply min-h-28;
+  }
+  .form .btn {
+    @apply justify-self-start;
+  }
+  .form .note {
+    @apply md:col-span-2;
+  }
+
+  /* Location facts block */
+  .facts {
+    @apply rounded-2xl border border-line bg-white p-6 md:p-8;
+  }
+  .facts-heading {
+    @apply mb-5 font-serif text-2xl font-medium;
+  }
+  .fact {
+    @apply border-t border-line py-4 first:border-t-0 first:pt-0;
+  }
+  .fact dt {
+    @apply mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink-3;
+  }
+  .fact dd {
+    @apply text-ink;
+  }
+  .fact-phone a {
+    @apply font-semibold text-accent;
+  }
+  .hours {
+    @apply w-full text-[15px];
+  }
+  .hours th {
+    @apply py-1 pr-4 text-left font-normal text-ink-2;
+  }
+  .hours td {
+    @apply py-1 text-right text-ink;
+  }
+
+  /* Hub card grids (services, team, blog) */
+  .hub-grid {
+    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .hub-team {
+    @apply lg:grid-cols-3;
+  }
+  .hub-card {
+    @apply overflow-hidden rounded-2xl border border-line bg-white transition-shadow hover:shadow-lg;
+  }
+  .hub-link {
+    @apply block h-full;
+  }
+  .hub-img {
+    @apply aspect-[8/5] w-full object-cover;
+  }
+  .hub-team .hub-img {
+    @apply aspect-[4/5];
+  }
+  .hub-body {
+    @apply p-6;
+  }
+  .hub-meta {
+    @apply mb-2 text-sm text-ink-3;
+  }
+  .hub-heading {
+    @apply font-serif text-[1.4rem] leading-snug font-medium text-ink;
+  }
+  .hub-role {
+    @apply mt-1 text-sm font-semibold text-accent;
+  }
+  .hub-summary {
+    @apply mt-3 text-[15px] leading-relaxed text-ink-2;
+  }
+  .hub-more {
+    @apply mt-4 inline-block text-[15px] font-semibold text-accent;
+  }
+}

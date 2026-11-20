@@ -1,0 +1,50 @@
+{
+  "name": "Larkmoor Family Dentistry",
+  "shortName": "Larkmoor Dental",
+  "url": "https://larkmoor-dental.vercel.app",
+  "mainPhone": "(503) 555-0100",
+  "email": "hello@larkmoordental.example",
+  "nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "New patients", "href": "/new-patients" },
+    { "label": "Insurance", "href": "/insurance-and-financing" },
+    { "label": "Locations", "href": "/locations" },
+    { "label": "Our team", "href": "/team" },
+    { "label": "About", "href": "/about" }
+  ],
+  "cta": { "label": "Book a visit", "href": "/book" },
+  "footer": {
+    "blurb": "Family dentistry in Larkmoor, Oregon since 2004. Cleanings, kids visits, implants and same-day emergencies, close to home in every part of town.",
+    "offices": [
+      { "name": "Northgate", "href": "/locations/northgate", "phone": "(503) 555-0142" },
+      { "name": "Riverside", "href": "/locations/riverside", "phone": "(503) 555-0156" },
+      { "name": "Old Mill", "href": "/locations/old-mill", "phone": "(503) 555-0168" }
+    ],
+    "columns": [
+      {
+        "heading": "Patients",
+        "links": [
+          { "label": "New patients", "href": "/new-patients" },
+          { "label": "Insurance and financing", "href": "/insurance-and-financing" },
+          { "label": "Book a visit", "href": "/book" },
+          { "label": "Patient reviews", "href": "/reviews" }
+        ]
+      },
+      {
+        "heading": "Practice",
+        "links": [
+          { "label": "About us", "href": "/about" },
+          { "label": "Our team", "href": "/team" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Careers", "href": "/careers" },
+          { "label": "Contact", "href": "/contact" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "Privacy", "href": "/privacy" },
+      { "label": "Accessibility", "href": "/accessibility" }
+    ],
+    "disclaimer": "Larkmoor Family Dentistry is a fictional practice used for product demos."
+  }
+}

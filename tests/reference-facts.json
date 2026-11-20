@@ -1,0 +1,60 @@
+{
+  "_note": "Read only by scripts/check-baseline.ts. Never imported by the site. Content keeps its own copies on purpose (F2).",
+  "practice": {
+    "name": "Larkmoor Family Dentistry",
+    "mainPhone": "(503) 555-0100",
+    "email": "hello@larkmoordental.example",
+    "founded": "2004"
+  },
+  "offices": {
+    "northgate": {
+      "name": "Northgate",
+      "street": "2140 Northgate Avenue",
+      "suite": null,
+      "city": "Larkmoor",
+      "state": "OR",
+      "zip": "97399",
+      "phone": "(503) 555-0142"
+    },
+    "riverside": {
+      "name": "Riverside",
+      "street": "88 River Road",
+      "suite": null,
+      "city": "Larkmoor",
+      "state": "OR",
+      "zip": "97399",
+      "phone": "(503) 555-0156"
+    },
+    "old-mill": {
+      "name": "Old Mill",
+      "street": "415 Mill Race Lane",
+      "suite": null,
+      "city": "Larkmoor",
+      "state": "OR",
+      "zip": "97399",
+      "phone": "(503) 555-0168"
+    }
+  },
+  "hours": [
+    { "days": "Monday to Thursday", "time": "7:30 am to 6:00 pm" },
+    { "days": "Friday", "time": "7:30 am to 3:00 pm" },
+    { "days": "Saturday", "time": "8:00 am to 1:00 pm" },
+    { "days": "Sunday", "time": "Closed" }
+  ],
+  "prices": {
+    "$349": "in-office whitening",
+    "$199": "take-home whitening trays",
+    "$149": "new patient exam, cleaning and x-rays without insurance",
+    "$29": "membership plan, adults, per month",
+    "$19": "membership plan, kids under 14, per month",
+    "$89": "emergency exam without insurance"
+  },
+  "staff": {
+    "dr-helen-whitfield": { "name": "Dr. Helen Whitfield", "credentials": "DDS", "role": "Founder and general dentist", "office": "riverside" },
+    "dr-marcus-oyelaran": { "name": "Dr. Marcus Oyelaran", "credentials": "DMD", "role": "General dentist", "office": "northgate" },
+    "dr-priya-natarajan": { "name": "Dr. Priya Natarajan", "credentials": "DDS", "role": "Family and kids dentist", "office": "old-mill" },
+    "dr-samuel-brandt": { "name": "Dr. Samuel Brandt", "credentials": "DDS", "role": "Implants and oral surgery", "office": "riverside" },
+    "jenna-kowalski": { "name": "Jenna Kowalski", "credentials": "RDH", "role": "Dental hygienist", "office": "northgate" },
+    "luis-ortega": { "name": "Luis Ortega", "credentials": "RDH", "role": "Dental hygienist", "office": "old-mill" }
+  }
+}
