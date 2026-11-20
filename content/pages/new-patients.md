@@ -10,7 +10,7 @@ jsonLd: none
 <h1>Your first visit, step by step</h1>
 <p class="hero-sub">No surprises and no pressure. Here is what happens, what to bring, and what it costs.</p>
 <div class="btn-row">
-<a class="btn" href="/book">Book your first visit</a>
+<a class="btn" href="/book-online-now">Book your first visit</a>
 </div>
 </div>
 <div class="hero-media">
