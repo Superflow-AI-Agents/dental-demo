@@ -9,6 +9,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "media:placeholders": "tsx scripts/make-placeholders.ts",
+    "media:icons": "tsx scripts/make-icons.ts",
     "check:baseline": "tsx scripts/check-baseline.ts"
   },
   "dependencies": {

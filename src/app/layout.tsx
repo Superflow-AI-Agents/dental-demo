@@ -13,7 +13,13 @@ const site = getSite();
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   applicationName: site.name,
-  icons: { icon: "/media/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/media/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
