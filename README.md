@@ -20,6 +20,22 @@ pnpm build && pnpm check:baseline
 
 `check:baseline` reads the built HTML and checks the clean baseline from the spec: one H1 and ordered headings, titles and descriptions, alt text, `tel:` and `mailto:` links, JSON-LD, sitemap, robots and `llms.txt`. It also checks every phone, address, hour and price against `tests/reference-facts.json`. Only the check reads that file. The site never does.
 
+## Demo changes
+
+To make Site Care react on a call, run the **Demo change** workflow. On GitHub open **Actions**, pick **Demo change**, click **Run workflow**, choose a type and run it. It commits one known change to `main`. Vercel deploys it to production, and Site Care checks the changed page a few minutes later. The run's summary says what changed, on which page, and which check should flag it.
+
+| Type | What it does | Check that should flag it |
+|---|---|---|
+| `broken-link` | The "Book your first visit" button on `/new-patients` goes to `/book-online-now`, which does not exist. | Link Checker |
+| `missing-alt-text` | The top photo on `/about` loses its alt text. | Accessibility Checker, Image Inspector |
+| `low-contrast` | The intro sentence on `/insurance-and-financing` turns pale grey. | Accessibility Checker |
+| `typo` | Three spelling mistakes in the intro paragraph on `/services`. | Proofreader |
+| `content-update` | Adds a numbered "Practice update" line on the home page. The number goes up on every run. No issue in it, so the check finds nothing new. | None |
+| `all-issues` | All four issues above in one commit. | All of the above |
+| `reset` | Removes every demo change, so the site is clean again. | Earlier findings go away |
+
+Run `reset` when the demo is over. Running a type that is already in place changes nothing and makes no commit. The same script runs locally with `pnpm demo:change <type>` (see `scripts/demo-change.ts`).
+
 ## Where things are
 
 | Path | What |

@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "media:placeholders": "tsx scripts/make-placeholders.ts",
     "media:icons": "tsx scripts/make-icons.ts",
-    "check:baseline": "tsx scripts/check-baseline.ts"
+    "check:baseline": "tsx scripts/check-baseline.ts",
+    "demo:change": "tsx scripts/demo-change.ts"
   },
   "dependencies": {
     "gray-matter": "4.0.3",
