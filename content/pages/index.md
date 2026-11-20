@@ -25,8 +25,6 @@ jsonLd: dentist
 <p><a href="/services/teeth-whitening">See how it works</a></p>
 </div>
 
-<p>Practice update 1, November 20, 2026: we refreshed the details on this page.</p>
-
 <div class="stat-row">
 <div class="stat"><strong>2004</strong><span>Caring for Larkmoor families since</span></div>
 <div class="stat"><strong>Same day</strong><span>Emergency visits on weekdays</span></div>
